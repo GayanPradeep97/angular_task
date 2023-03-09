@@ -1,5 +1,12 @@
 <p>register works!</p>
 
-<ul>
-    <li *ngFor="let user of datas">{{user.name}}</li>
-</ul>
+<form #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)">
+    <input type="text" ngModel name="name" placeholder="enter first name"/>
+    <br><br>
+    <input type="text" ngModel name="lastName" placeholder="enter last name"/>
+    <br><br>
+    <input type="text" ngModel name="email" placeholder="enter email"/>
+    <br><br>
+    <button>Add User</button>
+    
+</form>

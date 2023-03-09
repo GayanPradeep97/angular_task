@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.componnt';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AuthModule} from './auth/auth.module';
+import { FormsModule} from '@angular/forms'
 // import { UserDataService} from '././services/user-data.service';
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AuthModule} from './auth/auth.module';
     BrowserModule,
     AppRoutingModule,
     AuthModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
     
   ],
   providers: [],

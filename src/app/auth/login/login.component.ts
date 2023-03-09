@@ -23,7 +23,7 @@ export class LoginComponent {
   }
 
   public getMethod(){
-    this.http.get('https://jsonplaceholder.typicode.com/todos/1').subscribe((data) => {
+    this.http.get("http://localhost:3000/users").subscribe((data) => {
       console.log(data);
        this.jsonGetValue = data;
     })
@@ -36,13 +36,13 @@ export class LoginComponent {
         body: 'bar',
         userId: 1
       }
-      this.http.post('https://jsonplaceholder.typicode.com/posts',body).subscribe((data) => {
+      this.http.post("http://localhost:3000/users",body).subscribe((data) => {
         this.jsonPostValue = data;
       })
     }
 
     public deleteMethod(){
-      this.http.delete('https://jsonplaceholder.typicode.com/todos/101').subscribe((data) => {
+      this.http.delete("http://localhost:3000/users/1").subscribe((data) => {
         this.jsonDeleteValue = data;
     })
     }

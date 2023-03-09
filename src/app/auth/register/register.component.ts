@@ -16,4 +16,14 @@ export class RegisterComponent {
     })
   }
 
-}
+  getUserFormData(data:any){
+    console.warn(data);
+
+    this.userData.postUsers(data).subscribe((result) =>{
+      console.warn(result);
+    });
+  
+    
+    }
+  }
+
