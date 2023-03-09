@@ -1,0 +1,13 @@
+<div class="child">
+    <h2>child component</h2>
+    <!-- <p>Today's beverage: <strong>{{item}}</strong></p> -->
+
+    <label>Add new Items</label>
+    <input type="text" id='new-items' #newItem/>
+    <button (click)=addNewItem(newItem.value,newItem)>Add Items</button>
+    <button type="button" (click)="deleteItem(1)">Delete</button>
+    <!-- <button type="button" (click)=clearInput(newItem)>Clear</button> -->
+
+</div>
+
+  
