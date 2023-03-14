@@ -1,12 +1,31 @@
 <div class="child">
     <h2>child component</h2>
     <!-- <p>Today's beverage: <strong>{{item}}</strong></p> -->
+<div class="inputs">
 
-    <label>Add new Items</label>
+    <div class="rows">
+        <label>Add new Items</label>
     <input type="text" id='new-items' #newItem/>
-    <button (click)=addNewItem(newItem.value,newItem)>Add Items</button>
-    <button type="button" (click)="deleteItem(1)">Delete</button>
-    <!-- <button type="button" (click)=clearInput(newItem)>Clear</button> -->
+
+    </div>
+    
+    <div class="rows">
+        <!-- <input type="text" [hidden]="hiddenDisplay" (input)="changeValue($event)"/> -->
+    <label>Search Item</label>
+    <input type="text" [hidden]="hiddenDisplay" [(ngModel)]="serchvalue"/>
+    <span>"{{serchvalue}}"</span>
+    
+        </div>
+
+        <div class="rows">
+            <button (click)=addNewItem(newItem.value,newItem)>Add Items</button>
+            <button type="button" (click)="deleteItem(1)">Delete</button>
+            <button (click)="hideInputFild()">Hide input field</button>
+            <!-- <button type="button" (click)=clearInput(newItem)>Clear</button> -->
+        </div>
+    
+</div>
+    
 
 </div>
 

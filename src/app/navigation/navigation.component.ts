@@ -11,7 +11,11 @@ export class NavigationComponent {
 
   @Input() array = [''];
   @Output() addNewItemEvent = new EventEmitter<string>();
+
+  //input values
+  public serchvalue :string = 'iphone';
   
+  hiddenDisplay : boolean = false;
   
 
   addNewItem(value:string, inputField: HTMLInputElement){
@@ -20,6 +24,7 @@ export class NavigationComponent {
 
   }
  
+  //delete input items
   deleteItem(index:number){
     this.array.splice(index,1)
   }
@@ -27,5 +32,16 @@ export class NavigationComponent {
   // clearInput(inputField: HTMLInputElement){
   //   inputField.value='';
   // }
+
+  //input field value
+  changeValue(eventData :Event){
+    this.serchvalue = (<HTMLInputElement>eventData.target).value;
+    
+  }
+
+  //hide input field
+  hideInputFild(){
+    this.hiddenDisplay = true;
+  }
  
 }

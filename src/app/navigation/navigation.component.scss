@@ -6,8 +6,7 @@
     h2{
         text-align: center;
         color: #1976d2;
-
-        
+     
     }
     button{
         margin-left: 5px;
@@ -19,4 +18,16 @@
         cursor: pointer;
         font-size: 16px;
     }
+    .inputs{
+        display: flex;
+        flex-direction: column;
+
+        .rows{
+            display: flex;
+            margin: 20px;
+            padding: 10px;
+        }
+        
+    }
+   
 }
